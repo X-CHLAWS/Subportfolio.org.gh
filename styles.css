@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+body {
+    background: linear-gradient(to right, #0a0b10, #1f1f2e);
+    color: #c5c6c7;
+    transition: all 0.5s ease-in-out;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(10, 10, 20, 0.9);
+    box-shadow: 0px 0px 15px rgba(102, 252, 241, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav .logo img {
+    width: 120px;
+    transition: transform 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #66fcf1;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9100;
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: #66fcf1;
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(10, 10, 20, 0.95);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0px 10px 15px rgba(102, 252, 241, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links li a {
+        font-size: 1.4rem;
+    }
+}
+
+
+header {
+    text-align: center;
+    padding: 150px 20px;
+    background: url('header.jpg') no-repeat center center/cover;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 3rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+header p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+.center-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.tech-button {
+    background-color: #007BFF;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tech-button:hover {
+    background-color: #0056b3;
+}
+
+.bio-content {
+    display: none;
+    margin-top: 20px;
+    max-width: 600px;
+    padding: 20px;
+    background-color:  linear-gradient(to right, #0a0b10, #1f1f2e);;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+
+
+.services-preview, .service-list {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.services-preview h2, .service-list h2 {
+    font-size: 2.5rem;
+    color: #66fcf1;
+    text-shadow: 0px 0px 10px rgba(102, 252, 241, 0.8);
+}
+
+.service-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: transform 0.3s;
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(248, 180, 0, 0.6);
+}
+
+.service-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+
+#contact {
+    background: linear-gradient(to right, #0a0b10, #1f1f2e);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #00c3ff;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #1e293b;
+    color: white;
+    transition: 0.3s;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(0, 195, 255, 0.4);
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+    box-shadow: 0px 0px 10px rgba(0, 195, 255, 0.8);
+}
+
+#contactForm textarea {
+    height: 120px;
+    resize: none;
+}
+
+#contactForm button {
+    background: #00c3ff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+#contactForm button:hover {
+    background: #008ac1;
+    box-shadow: 0px 0px 10px rgba(0, 195, 255, 0.6);
+}
+
+
+#confirmationMessage {
+    display: none;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #00ff7f;
+    font-weight: bold;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    #contact {
+        padding: 40px 15px;
+    }
+    
+    #contact h2 {
+        font-size: 2rem;
+    }
+    
+    #contactForm {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact h2 {
+        font-size: 1.8rem;
+    }
+    
+    #contactForm input,
+    #contactForm textarea {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    
+    #contactForm button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+.social-media-section {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #0a0b10, #1f1f2e);
+    color: white;
+    margin-top: 40px;
+}
+
+.social-media-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.social-icons img {
+    width: 40px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1);
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f2e;
+    box-shadow: 0px -5px 10px rgba(102, 252, 241, 0.2);
+}
+
+
+@media (max-width: 1024px) {
+    nav {
+        padding: 10px 30px;
+    }
+    
+    header {
+        padding: 120px 10px;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+    
+    .service-box {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #66fcf1;
+    }
+
+    .menu-toggle:hover {
+        color: #ff9100;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .service-box {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

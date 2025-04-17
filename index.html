@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-Chlaws I.T Media</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   
+    <nav>
+    <div class="logo">
+        <img src="logo.png" alt="X-Chlaws IT Media Logo">
+    </div>
+    
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    
+    <header>
+        <h1>Welcome to X-Chlaws I.T Media</h1>
+        <p>Innovating Cybersecurity & AI Technologies</p>
+       
+    </header>
+<div class="center-container">
+    <button id="bioButton" class="tech-button">Click to Read Bio</button>
+    <div id="bioContent" class="bio-content">
+        <p>Parker Nhyira Nana Agyei Acheampong (X-Chlaws) is a skilled tech enthusiast and innovator, currently working at Teen Tech, a leading UK-based company offering remote jobs. With a deep passion for technology, cybersecurity, programming, and AI, X-Chlaws has made significant strides in the tech world. Known for their creative problem-solving skills and forward-thinking approach, they are dedicated to developing cutting-edge solutions that drive innovation. When not working, X-Chlaws explores new tech trends and strives to make an impact in the tech community.</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById("bioButton").onclick = function() {
+        var bioContent = document.getElementById("bioContent");
+        bioContent.style.display = bioContent.style.display === "none" ? "block" : "none";
+    }
+</script>
+    
+    <section class="services-preview">
+        <h2>Our Services</h2>
+        <div class="service-box">
+            <img src="cybersecurity.jpg">
+            <h3>Cybersecurity Solutions</h3>
+        </div>
+        <div class="service-box">
+            <img src="ai.jpg">
+            <h3>AI & Machine Learning</h3>
+        </div>
+        <div class="service-box">
+            <img src="it-consulting.jpg">
+            <h3>IT Consulting</h3>
+        </div>
+        <a href="projects.html" class="btn" style="text-decoration:none;
+        color:#ffffff;">View More</a>
+    </section>
+    <footer>
+    <p>&copy; 2025 X-Chlaws I.T Media. All Rights Reserved.</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
